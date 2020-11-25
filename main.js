@@ -34,6 +34,12 @@ function pause() {
   clearInterval(runTime);
 }
 
+function reset() {
+  decimal = "0";
+  sec = 0;
+  timeFormat();
+}
+
 function resume() {
   decimal = second.textContent[0], 10;
   sec = second.textContent[1], 10;
@@ -55,6 +61,12 @@ console.log(timeState);
     resume();
     timeState = 1;
   }
+})
+
+btnReset.addEventListener('click', () => {
+  clearInterval(runTime);
+  reset();
+  timeState = 0;
 })
 
 
