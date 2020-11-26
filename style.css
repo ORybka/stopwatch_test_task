@@ -53,8 +53,22 @@ html {
 }
 
 .time-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin: 2rem auto;
   font-size: 9rem;
+}
+
+.time-container .time {
+  width: 10rem;
+  text-align: center;
+}
+
+.time-container .dots {
+  width: 2rem;
 }
 
 .btn-container {

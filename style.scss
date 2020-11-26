@@ -44,8 +44,19 @@ html {
 }
 
 .time-container {
+  display: flex;
+  justify-content: space-around;
   margin: 2rem auto;
   font-size: 9rem;
+
+  .time {
+    width: 10rem;
+    text-align: center;
+  }
+
+  .dots {
+    width: 2rem;
+  }
 }
 
 .btn-container {
