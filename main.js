@@ -1,7 +1,7 @@
 let sec = 0;
 let min = 0;
 let hr = 0;
-let runTime;
+let runTime, clickTime, date;
 let decimal = "0";
 let timeState = 0; // 0 - stop, 1 - run, 2 - pause
 const btnStart = document.querySelector('.start');
@@ -30,9 +30,6 @@ function timeFormat() {
     hour.innerHTML = hr;
   }
 }
-
-console.log(sec);
-console.log(min);
 
 function run() {
   sec++
@@ -86,6 +83,18 @@ btnStart.addEventListener('click', () => {
     resume();
     timeState = 1;
   }
+})
+
+let lastClick = 0
+
+btnWait.addEventListener('click', () => {
+  date = new Date();
+  clickTime = date.getTime();
+  if (clickTime - lastClick < 300) {
+    pause()
+    timeState = 2;
+  } 
+  lastClick = clickTime;
 })
 
 btnReset.addEventListener('click', () => {
