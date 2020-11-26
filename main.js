@@ -51,7 +51,7 @@ function run() {
 }
 
 function init() {
-  runTime = setInterval(run, 600);
+  runTime = setInterval(run, 1000);
 }
 
 function pause() {
@@ -71,7 +71,7 @@ function reset() {
 }
 
 function resume() {
-  runTime = setInterval(run, 600);
+  runTime = setInterval(run, 1000);
 }
 
 btnStart.addEventListener('click', () => {
